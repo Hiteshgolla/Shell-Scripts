@@ -1,22 +1,18 @@
 #!/bin/bash
 
-name=$(whoami)
-pwd=$(pwd)
-date=$(date "+%a %b %d %I:%M %p")
-if [[ "$name" != "hitesh" ]]; then
+#The Beast
+beast=$((RANDOM % 2))
+echo "Pick a number between 0 and 1 choose wisely"
+read human
 
-echo "You cant become a milliionare"
-
+if [[ "$human" != "0" && "$human" != "1" ]]; then
+echo "Goddammit cant u pick a number between 0 and 1"
 else
-
-echo "What is your age"
-read age
-millionare=$((($RANDOM % 15) + age))
-echo "Hello $name"
-sleep 1
-echo "You are in $pwd"
-sleep 1
-echo "Today's Date: $date"
-sleep 1
-echo "you will become millionare at $millionare"
+echo "Good!!, let the battle begin"
+sleep 3
+	if [[ "$beast" == "$human" ]]; then
+		echo "The beast has killed you"
+	else
+		echo "Tanished thou have won the Battle rejoice!!"
+	fi
 fi
