@@ -1,0 +1,8 @@
+#!/bin/bash
+
+query="$*"
+if [[ "$query" == *.* ]]; then
+    firefox --new-tab "https://$query"
+else
+    firefox --new-tab "https://google.com/search?q=$query"
+fi
